@@ -5,6 +5,7 @@ from lic import check_license, decrypt, ex_key, ex_login, cprint_heck_license
 from scanner2 import check_ports
 from stats import click
 from loguru import logger
+from db_streams import is_stream_paused
 
 logger.add("api.log", rotation="500 MB", encoding="utf-8", level="DEBUG")
 app = Flask(__name__)
